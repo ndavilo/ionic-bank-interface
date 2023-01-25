@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>feeds</ion-title>
+    <button class="ion-float-end" (click)="userlogout()">
+      <ion-icon name="log-out" size="large"></ion-icon>
+    </button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-content *ngFor="let account of customers.customer" class="center">
+        <ion-card>
+          <ion-card-header>
+            Account Number: {{account.id}}
+          </ion-card-header>
+          <ion-card-content>
+            <ion-item>
+              Balance: {{account.amount}}
+            </ion-item>
+            <ion-item>
+              Creadits: {{account.credit_account.length}}
+              <div *ngIf="account.credit_account.length">
+                <ion-icon name="open-outline" [routerLink]="['./', account.id]"></ion-icon>
+              </div>
+            </ion-item>
+            <ion-item>
+              Debits: {{account.debit_account.length}}
+              <div *ngIf="account.debit_account.length">
+                <ion-icon name="open-outline" [routerLink]="['./', account.id]"></ion-icon>view
+              </div>
+            </ion-item>
+            <ion-item>
+              Deposits:{{account.deposit_account.length}}
+              <div *ngIf="account.deposit_account.length">
+                <ion-icon name="open-outline" [routerLink]="['./', account.id]"></ion-icon>
+              </div>
+            </ion-item>
+            <ion-item>
+              Withdrawals: {{account.withdraw_account.length}}
+              <div *ngIf="account.withdraw_account.length">
+                <ion-icon name="open-outline" [routerLink]="['./', account.id]"></ion-icon>
+              </div>
+            </ion-item>
+          </ion-card-content>
+        </ion-card>
+  </ion-content>
+</ion-content>

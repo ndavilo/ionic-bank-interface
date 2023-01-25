@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>verifyapp</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="center">
+    <app-logo></app-logo>
+  </div>
+  <div class="control">
+  <form>
+    <ion-list>
+      <ion-list-header>
+        <h1>Enter token</h1>
+      </ion-list-header>
+
+      <ion-item>
+        <ion-label position="floating">Account Number</ion-label>
+        <ion-input type="number" name="account" [(ngModel)]="postData.account"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="floating">token</ion-label>
+        <ion-input type="number" name="token" [(ngModel)]="postData.token"></ion-input>
+      </ion-item>
+
+      <ion-button expand="block" shape="round" color="success" (click)="verifyAction()">Verify</ion-button>
+    </ion-list>
+  </form>
+  <ion-button expand="block" shape="round" color="secondary" (click)="navigateToSignUp()">New User</ion-button>
+</div>
+
+</ion-content>

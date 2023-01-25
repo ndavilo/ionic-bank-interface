@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>profile</ion-title>
+    <button class="ion-float-end" (click)="userlogout()">
+      <ion-icon name="log-out" size="large"></ion-icon>
+    </button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item class="center">
+    <ion-card>
+      <ion-card-header>
+        <ion-avatar>
+          <ion-img src="{{customers.photo}}" alt="profile picture"></ion-img>
+        </ion-avatar>
+        <ion-item>
+        </ion-item>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item>
+          Email: {{customers.email}}
+        </ion-item>
+        <ion-item>
+          First Name: {{customers.first_name}}
+        </ion-item>
+        <ion-item>
+          Second Name: {{customers.last_name}}
+        </ion-item>
+        <ion-item>
+          Middle Name: {{customers.middle_name}}
+        </ion-item>
+        <ion-item>
+          Phone Number: {{customers.phone_number}}
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+  </ion-item>
+  </ion-content>
